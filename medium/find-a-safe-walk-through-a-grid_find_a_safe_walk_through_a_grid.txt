@@ -1,0 +1,13 @@
+                    if (newHealth > 0 && newHealth 
+                    > maxHealth[nr][nc]) {
+                        maxHealth[nr][nc] = 
+                        newHealth;
+                        q.push({nr, nc});
+                    }
+                }
+            }
+        }
+        
+        return maxHealth[m - 1][n - 1] > 0;
+    }
+};
