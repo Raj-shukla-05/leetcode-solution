@@ -1,0 +1,14 @@
+                k--;
+            }
+            stack.push_back(digit);
+        }
+        while(k > 0 && !stack.empty()){
+            stack.pop_back();
+            k--;
+        }
+        int start = 0;
+        while(start  < stack.size() && stack[start] 
+        == '0'){
+            start++;
+        }
+        string result = stack.substr(start);
