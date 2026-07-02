@@ -1,0 +1,11 @@
+            if(nextGreater.find(num) != nextGreater.
+            end()){
+                ans.push_back(nextGreater[num]);
+            }
+            else{
+                ans.push_back(-1);
+            }
+        }
+        return ans;
+    }
+};
