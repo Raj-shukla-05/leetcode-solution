@@ -1,0 +1,13 @@
+        if (cache.find(key) == cache.end()) {
+    
+    int get(int key) {
+        cap = capacity;
+    }
+public:
+    LRUCache(int capacity) {
+    
+    unordered_map<int, list<pair<int, int>>::iterator> cache;
+    list<pair<int, int>> dll;
+    int cap;
+private:
+class LRUCache {
