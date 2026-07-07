@@ -1,0 +1,13 @@
+                if (rows[i].count(c) || cols[j].count(c) || boxes[boxIndex].count(c)) {
+                int boxIndex = (i / 3) * 3 + j / 3;
+                
+                
+                char c = board[i][j];
+                if (c == '.') continue;
+        
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+    bool isValidSudoku(vector<vector<char>>& board) {
+        vector<unordered_set<char>> rows(9), cols(9), boxes(9);
+public:
+class Solution {
