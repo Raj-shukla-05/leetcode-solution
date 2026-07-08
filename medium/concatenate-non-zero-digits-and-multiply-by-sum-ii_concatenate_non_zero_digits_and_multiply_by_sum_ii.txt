@@ -1,0 +1,13 @@
+            int startIdx = posToIdx[firstNonZero];
+            int endIdx = posToIdx[lastNonZero];
+            
+            long long x = (prefixNum[endIdx + 1] - prefixNum[startIdx] * pow10[endIdx - startIdx + 1] % MOD + MOD) % 
+            MOD;
+            int sum = (prefixSum[endIdx + 1] - prefixSum[startIdx] + MOD) % MOD;
+            
+            answer.push_back((x * sum) % MOD);
+        }
+        
+        return answer;
+    }
+};
