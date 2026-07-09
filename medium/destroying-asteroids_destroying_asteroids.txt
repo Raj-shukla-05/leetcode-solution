@@ -1,0 +1,13 @@
+        long long currentMass = mass;
+        
+        for (int asteroid : asteroids) {
+            if (currentMass >= asteroid) {
+                currentMass += asteroid;
+            } else {
+                return false;
+            }
+        }
+        sort(asteroids.begin(), asteroids.end());
+    bool asteroidsDestroyed(int mass, vector<int>& asteroids) {
+public:
+class Solution {
