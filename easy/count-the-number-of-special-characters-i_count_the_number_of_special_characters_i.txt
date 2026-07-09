@@ -1,0 +1,13 @@
+            } else {
+                upper[c - 'A'] = true;
+            }
+        }
+        
+            if (islower(c)) {
+                lower[c - 'a'] = true;
+        
+        for (char c : word) {
+        vector<bool> lower(26, false), upper(26, false);
+    int numberOfSpecialChars(string word) {
+public:
+class Solution {
