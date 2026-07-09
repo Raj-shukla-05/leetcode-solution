@@ -1,0 +1,13 @@
+                unite(i, i + 1);
+            }
+        }
+        
+        vector<bool> answer;
+        answer.reserve(queries.size());
+        for (auto& q : queries) {
+            answer.push_back(find(q[0]) == find(q[1]));
+        }
+        
+        return answer;
+    }
+};
