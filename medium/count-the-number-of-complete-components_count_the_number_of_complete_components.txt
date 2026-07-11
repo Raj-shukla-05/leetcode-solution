@@ -1,0 +1,23 @@
+                        if (!visited[v]) {
+                            visited[v] = true;
+                            q.push(v);
+                        }
+                    }
+                }
+                
+                int size = component.size();
+                bool isComplete = true;
+                for (int u : component) {
+                    if (adj[u].size() != size - 1) {
+                        isComplete = false;
+                        break;
+                    }
+                }
+                
+                if (isComplete) count++;
+            }
+        }
+        
+        return count;
+    }
+};
