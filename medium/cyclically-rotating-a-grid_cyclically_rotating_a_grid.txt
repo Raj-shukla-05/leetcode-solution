@@ -1,0 +1,23 @@
+            
+            int idx = shift;
+            for (int j = left; j <= right; j++) {
+                grid[top][j] = elements[idx % len];
+                idx++;
+            }
+            for (int i = top + 1; i <= bottom; i++) {
+                grid[i][right] = elements[idx % len];
+                idx++;
+            }
+            for (int j = right - 1; j >= left; j--) {
+                grid[bottom][j] = elements[idx % len];
+                idx++;
+            }
+            for (int i = bottom - 1; i > top; i--) {
+                grid[i][left] = elements[idx % len];
+                idx++;
+            }
+        }
+        
+        return grid;
+    }
+};
