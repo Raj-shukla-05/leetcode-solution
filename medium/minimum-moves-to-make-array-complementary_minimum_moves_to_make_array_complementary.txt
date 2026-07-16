@@ -1,0 +1,24 @@
+        for (int i = 0; i < n / 2; i++) {
+            int a = nums[i], b = nums[n - 1 - i];
+            int sum = a + b;
+            int minSum = min(a, b) + 1;
+            int maxSum = max(a, b) + limit;
+            
+            diff[2] += 2;
+            diff[minSum]--;
+            diff[sum]--;
+            diff[sum + 1]++;
+            diff[maxSum + 1]++;
+        }
+        
+        int moves = n;
+        int cur = 0;
+        for (int i = 2; i <= 2 * limit; i++) {
+            cur += diff[i];
+            moves = min(moves, cur);
+        
+        vector<int> diff(2 * limit + 2, 0);
+        int n = nums.size();
+    int minMoves(vector<int>& nums, int limit) {
+public:
+class Solution {
