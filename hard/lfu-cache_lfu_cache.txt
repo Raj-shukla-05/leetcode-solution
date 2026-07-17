@@ -1,0 +1,22 @@
+            int evictKey = freqToKeys[minFreq].back();
+            freqToKeys[minFreq].pop_back();
+            if (freqToKeys[minFreq].empty()) {
+                freqToKeys.erase(minFreq);
+            }
+            keyToValFreq.erase(evictKey);
+            keyToIter.erase(evictKey);
+        }
+        
+        keyToValFreq[key] = {value, 1};
+        freqToKeys[1].push_front(key);
+        keyToIter[key] = freqToKeys[1].begin();
+        minFreq = 1;
+    }
+};
+
+/**
+ * Your LFUCache object will be instantiated and called as such:
+ * LFUCache* obj = new LFUCache(capacity);
+ * int param_1 = obj->get(key);
+ * obj->put(key,value);
+ */
