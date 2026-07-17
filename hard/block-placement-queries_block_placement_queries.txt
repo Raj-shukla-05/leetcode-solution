@@ -1,0 +1,23 @@
+                update(1, 0, maxX, left, x - left);
+                if (right <= maxX) {
+                    update(1, 0, maxX, x, right - x);
+                }
+                
+                obs.insert(x);
+            } else {
+                int x = q[1], sz = q[2];
+                auto it = obs.upper_bound(x);
+                it--;
+                int left = *it;
+                
+                int maxGap = x - left;
+                if (left > 0) {
+                    maxGap = max(maxGap, query(1, 0, maxX, 0, left - 1));
+                }
+                results.push_back(maxGap >= sz);
+            }
+        }
+        
+        return results;
+    }
+};
