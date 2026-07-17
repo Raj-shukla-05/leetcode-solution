@@ -1,0 +1,24 @@
+class Solution {
+public:
+    vector<int> gcdValues(vector<int>& nums, vector<long long>& queries) {
+        int maxVal = *max_element(nums.begin(), nums.end());
+        
+        vector<int> freq(maxVal + 1, 0);
+        for (int num : nums) freq[num]++;
+        
+        vector<long long> count(maxVal + 1, 0);
+        for (int g = maxVal; g >= 1; g--) {
+            int multiples = 0;
+            for (int m = g; m <= maxVal; m += g) {
+                multiples += freq[m];
+            }
+            count[g] = (long long)multiples * (multiples - 1) / 2;
+            for (int m = 2 * g; m <= maxVal; m += g) {
+                count[g] -= count[m];
+            }
+        }
+        
+        vector<long long> prefix(maxVal + 1, 0);
+        for (int g = 1; g <= maxVal; g++) {
+            prefix[g] = prefix[g - 1] + count[g];
+        }
