@@ -1,0 +1,11 @@
+        int maxGain = 0;
+        for (int i = 1; i < zeroBlocks.size(); i++) 
+        {
+            int gain = zeroBlocks[i - 1] + 
+            zeroBlocks[i];
+            maxGain = max(maxGain, gain);
+        }
+        
+        return totalOnes + maxGain;
+    }
+};
