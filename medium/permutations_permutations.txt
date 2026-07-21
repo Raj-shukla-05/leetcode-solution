@@ -1,0 +1,13 @@
+    void backtrack(vector<int>& nums, int start, vector<vector<int>>& result) {
+        if (start == nums.size()) {
+            result.push_back(nums);
+            return;
+        }
+    
+    }
+        return result;
+        vector<vector<int>> result;
+        backtrack(nums, 0, result);
+    vector<vector<int>> permute(vector<int>& nums) {
+public:
+class Solution {
