@@ -1,0 +1,13 @@
+class Solution {
+public:
+    int maxActiveSectionsAfterTrade(string s) {
+        int n = s.size();
+        string t = "1" + s + "1";
+        
+        vector<int> zeroBlocks, oneBlocks;
+        int i = 0;
+        while (i < t.size()) {
+            int j = i;
+            while (j < t.size() && t[j] == t[i]) j++;
+            if (t[i] == '0') zeroBlocks.push_back(j - i);
+            else oneBlocks.push_back(j - i);
