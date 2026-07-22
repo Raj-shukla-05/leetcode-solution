@@ -1,0 +1,23 @@
+            
+            int segL = pos_to_seg[L];
+            int segR = pos_to_seg[R];
+            
+            if (segR - segL < 2) {
+                res.push_back(total_ones);
+                continue;
+            }
+            
+            int max_gain = 0;
+            max_gain = max(max_gain, eval(segL + 1, L, R, segL, segR));
+            max_gain = max(max_gain, eval(segR - 1, L, R, segL, segR));
+            
+            if (segL + 2 <= segR - 2) {
+                max_gain = max(max_gain, queryRMQ(segL + 2, segR - 2));
+            }
+            
+            res.push_back(total_ones + max_gain);
+        }
+        
+        return res;
+    }
+};
