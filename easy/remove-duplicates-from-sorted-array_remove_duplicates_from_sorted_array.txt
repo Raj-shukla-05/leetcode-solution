@@ -1,0 +1,14 @@
+                nums[officer] = nums[cm];
+                officer++;
+            if (nums[cm] == nums[cm - 1]) {
+        while (cm < nums.size()) {
+                cm++;
+            } else {
+
+        int cm = 1;
+                cm++;
+        int officer = 1;
+    int removeDuplicates(vector<int>& nums) {
+            }
+        }
+        return officer;
