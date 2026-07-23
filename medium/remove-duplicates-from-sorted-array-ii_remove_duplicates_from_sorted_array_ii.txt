@@ -1,0 +1,13 @@
+        }
+        return k;
+};
+    }
+                k++;
+            if (k < 2 || num > nums[k - 2]) {
+        for (int num : nums) {
+        int k = 0;
+    int removeDuplicates(vector<int>& nums) {
+public:
+class Solution {
+                nums[k] = num;
+            }
