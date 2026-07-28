@@ -1,0 +1,9 @@
+        char middle = 0;
+        string left = "";
+        
+        for (char c : s) freq[c - 'a']++;
+        vector<int> freq(26, 0);
+        int n = s.size();
+    string smallestPalindrome(string s) {
+public:
+class Solution {
