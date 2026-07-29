@@ -1,0 +1,9 @@
+        }
+        
+        string right = left;
+        reverse(right.begin(), right.end());
+        
+        if (middle) return left + middle + right;
+        return left + right;
+    }
+};
