@@ -1,0 +1,17 @@
+class Solution {
+public:
+    int minimumPushes(string word) {
+        int n = word.size();
+        int pushes = 0;
+        int multiplier = 1;
+        int keys = 8;
+        
+        while (n > 0) {
+            int assign = min(n, keys);
+            pushes += assign * multiplier;
+            n -= assign;
+            multiplier++;
+        }
+        
+        return pushes;
+    }
