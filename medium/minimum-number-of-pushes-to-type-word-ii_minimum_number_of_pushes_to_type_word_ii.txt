@@ -1,0 +1,9 @@
+        int pushes = 0;
+        
+        sort(freq.rbegin(), freq.rend());
+        
+        for (char c : word) freq[c - 'a']++;
+        vector<int> freq(26, 0);
+    int minimumPushes(string word) {
+public:
+class Solution {
