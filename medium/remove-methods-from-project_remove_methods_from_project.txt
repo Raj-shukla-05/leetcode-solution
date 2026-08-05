@@ -1,0 +1,17 @@
+        suspicious[k] = true;
+        q.push(k);
+        queue<int> q;
+        
+        vector<bool> suspicious(n, false);
+        }
+            rev[inv[1]].push_back(inv[0]);
+        for (auto& inv : invocations) {
+            adj[inv[0]].push_back(inv[1]);
+        
+        vector<vector<int>> rev(n);
+        vector<vector<int>> adj(n);
+    vector<int> remainingMethods(int n, int k, vector<vector<int>>& invocations) {
+public:
+        
+        while (!q.empty()) {
+class Solution {
