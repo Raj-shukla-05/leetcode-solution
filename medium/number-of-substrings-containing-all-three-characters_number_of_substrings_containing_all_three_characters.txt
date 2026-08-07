@@ -1,0 +1,10 @@
+        for (int right = 0; right < n; right++) {
+            freq[s[right] - 'a']++;
+        vector<int> freq(3, 0);
+        
+        int count = 0;
+        int left = 0;
+        int n = s.size();
+    int numberOfSubstrings(string s) {
+public:
+class Solution {
