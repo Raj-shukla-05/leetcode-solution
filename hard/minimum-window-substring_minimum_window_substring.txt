@@ -1,0 +1,10 @@
+        for (int right = 0; right < s.size(); right++) {
+        int minLen = INT_MAX, minStart = 0;
+        
+        int left = 0, count = t.size();
+        
+        for (char c : t) need[c]++;
+        vector<int> need(128, 0);
+    string minWindow(string s, string t) {
+public:
+class Solution {
