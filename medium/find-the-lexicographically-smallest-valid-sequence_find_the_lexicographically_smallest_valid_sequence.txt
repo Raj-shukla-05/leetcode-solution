@@ -1,0 +1,10 @@
+            if (word1[i] == word2[j]) {
+                lastMatch[j] = i;
+        for (int i = n - 1; i >= 0 && j >= 0; i--) {
+        vector<int> lastMatch(m, -1);
+        int j = m - 1;
+        
+    vector<int> validSequence(string word1, string word2) {
+        int n = word1.size(), m = word2.size();
+public:
+class Solution {
