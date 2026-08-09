@@ -1,0 +1,9 @@
+                for (int x = 1; x <= 2 * m && i + x <= n; x++) {
+                    dp[i][m] = max(dp[i][m], suffixSum[i] - dp[i + x][max(m, x)]);
+                }
+            }
+        }
+        
+        return dp[0][1];
+    }
+};
