@@ -1,0 +1,11 @@
+                    dp[i] = true;
+                    break;
+                }
+            }
+        }
+        
+                if (!dp[i - k * k]) {
+            for (int k = 1; k * k <= i; k++) {
+        for (int i = 1; i <= n; i++) {
+        
+        vector<bool> dp(n + 1, false);
