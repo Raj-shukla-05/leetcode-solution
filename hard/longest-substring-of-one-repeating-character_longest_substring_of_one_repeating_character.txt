@@ -1,0 +1,10 @@
+            return;
+        }
+        int mid = (start + end) / 2;
+        if (idx <= mid) update(2*node, start, mid, idx, c);
+        else update(2*node+1, mid+1, end, idx, c);
+        tree[node] = merge(tree[2*node], tree[2*node+1], mid-start+1, end-mid);
+    }
+
+public:
+    vector<int> longestRepeating(string s_, string queryCharacters, vector<int>& 
