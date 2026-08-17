@@ -1,0 +1,17 @@
+                        dp[i][j] = max(dp[i][j], dp[i]
+                        [k] + leftSum);
+                    } else if (leftSum > rightSum) {
+                        dp[i][j] = max(dp[i][j], dp[k 
+                        + 1][j] + rightSum);
+                    } else {
+                        dp[i][j] = max(dp[i][j], max
+                        (dp[i][k], dp[k + 1][j]) + 
+                        leftSum);
+                    }
+                }
+            }
+        }
+        
+        return dp[0][n - 1];
+    }
+};
