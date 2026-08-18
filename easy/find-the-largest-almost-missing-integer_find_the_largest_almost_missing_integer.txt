@@ -1,0 +1,9 @@
+        for (auto& [num, count] : freq) {
+            if (count == 1) {
+                result = max(result, num);
+            }
+        }
+        
+        return result;
+    }
+};
