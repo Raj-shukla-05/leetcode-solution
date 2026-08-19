@@ -1,0 +1,9 @@
+            bool right = (mask & 0b0000001111) == 0;
+            
+            if (left && right) result += 2;
+            else if (left || middle || right) result += 1;
+        }
+        
+        return result;
+    }
+};
