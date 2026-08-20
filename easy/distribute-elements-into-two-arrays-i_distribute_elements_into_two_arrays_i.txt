@@ -1,0 +1,9 @@
+            if (arr1.back() > arr2.back()) {
+        for (int i = 2; i < nums.size(); i++) {
+        arr2.push_back(nums[1]);
+        
+        arr1.push_back(nums[0]);
+        vector<int> arr1, arr2;
+    vector<int> resultArray(vector<int>& nums) {
+public:
+class Solution {
