@@ -1,0 +1,17 @@
+                if (lcm <= mid) {
+                    if (bits % 2 == 1) count += mid / 
+                    lcm;
+                    else count -= mid / lcm;
+                }
+            }
+            
+            if (count >= k) {
+                right = mid;
+            } else {
+                left = mid + 1;
+            }
+        }
+        
+        return left;
+    }
+};
