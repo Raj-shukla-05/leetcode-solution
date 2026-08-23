@@ -1,0 +1,19 @@
+            if (num[i] == '?') rightQ++;
+            else rightSum += num[i] - '0';
+        }
+        
+        int diff = leftSum - rightSum;
+        int qDiff = leftQ - rightQ;
+        
+        if ((leftQ + rightQ) % 2 == 1) return true;
+        
+        if (diff == 0 && qDiff == 0) return false;
+        
+        if (diff * qDiff >= 0) return true;
+        
+        int totalQ = abs(qDiff) / 2;
+        if (totalQ * 9 == abs(diff)) return false;
+        
+        return true;
+    }
+};
