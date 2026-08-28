@@ -1,0 +1,34 @@
+class Solution {
+public:
+    string lexPalindromicPermutation(string s, string target) {
+        int n = s.size();
+        vector<int> freq(26, 0);
+        for (char c : s) freq[c - 'a']++;
+        
+        int oddCount = 0;
+        char oddChar = 0;
+        for (int i = 0; i < 26; i++) {
+            if (freq[i] % 2 == 1) {
+                oddCount++;
+                oddChar = 'a' + i;
+            }
+        }
+        if (oddCount > 1) return "";
+        
+        string half = "";
+        for (int i = 0; i < 26; i++) {
+            half += string(freq[i] / 2, 'a' + i);
+        }
+        
+        string result = "";
+        vector<bool> used(half.size(), false);
+        string mid = oddChar ? string(1, oddChar) : "";
+        
+        function<bool(int)> dfs = [&](int pos) -> bool {
+            if (pos == half.size()) {
+                string rev = result;
+                reverse(rev.begin(), rev.end());
+                string full = result + mid + rev;
+                return full > target;
+            }
+            
