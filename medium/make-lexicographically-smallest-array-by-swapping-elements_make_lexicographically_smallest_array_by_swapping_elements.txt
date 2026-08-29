@@ -1,0 +1,33 @@
+        }
+        sort(sorted.begin(), sorted.end());
+        
+        vector<int> result(n);
+        int i = 0;
+        
+        while (i < n) {
+            int j = i;
+            vector<int> indices;
+            vector<int> values;
+            
+            while (j < n - 1 && sorted[j + 1].first - sorted[j].first <= limit) {
+                j++;
+            }
+            
+            for (int k = i; k <= j; k++) {
+                indices.push_back(sorted[k].second);
+                values.push_back(sorted[k].first);
+            }
+            
+            sort(indices.begin(), indices.end());
+            sort(values.begin(), values.end());
+            
+            for (int k = 0; k < indices.size(); k++) {
+                result[indices[k]] = values[k];
+            }
+            
+            i = j + 1;
+        }
+        
+        return result;
+    }
+};
