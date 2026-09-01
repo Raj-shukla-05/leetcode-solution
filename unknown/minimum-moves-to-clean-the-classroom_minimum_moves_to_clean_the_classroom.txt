@@ -1,0 +1,34 @@
+class Solution {
+public:
+    int minMoves(vector<string>& classroom, int energy) {
+        int m = classroom.size();
+        int n = classroom[0].size();
+
+        vector<vector<int>> id(m, vector<int>(n, -1));
+
+        int k = 0;
+        int sr = 0, sc = 0;
+
+        for (int r = 0; r < m; r++) {
+            for (int c = 0; c < n; c++) {
+                if (classroom[r][c] == 'S') {
+                    sr = r;
+                    sc = c;
+                } else if (classroom[r][c] == 'L') {
+                    id[r][c] = k++;
+                }
+            }
+        }
+
+        if (k == 0) return 0;
+
+        int totalMask = (1 << k) - 1;
+
+        vector<vector<vector<int>>> best(
+            m, vector<vector<int>>(n, vector<int>(1 << k, -1))
+        );
+
+        struct State {
+            int r, c, mask, e, moves;
+        };
+
