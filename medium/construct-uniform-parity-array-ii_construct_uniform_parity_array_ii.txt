@@ -1,0 +1,33 @@
+                }
+            }
+            
+            if (!canConvert) {
+                canMakeAllOdd = false;
+                break;
+            }
+        }
+        if (canMakeAllOdd) return true;
+        
+        bool canMakeAllEven = true;
+        for (int num : nums1) {
+            if (num % 2 == 0) continue;
+            
+            bool canConvert = false;
+            for (int j = 0; j < n; j++) {
+                if (nums1[j] != num && num - nums1[j] 
+                >= 1 && (num - nums1[j]) % 2 == 0) {
+                    canConvert = true;
+                    break;
+                }
+            }
+            
+            if (!canConvert) {
+                canMakeAllEven = false;
+                break;
+            }
+        }
+        if (canMakeAllEven) return true;
+        
+        return false;
+    }
+};
