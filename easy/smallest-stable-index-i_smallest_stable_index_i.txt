@@ -1,0 +1,19 @@
+        for (int i = 0; i < n; i++) {
+            int maxLeft = nums[0];
+            for (int j = 0; j <= i; j++) {
+                maxLeft = max(maxLeft, nums[j]);
+            }
+            
+            int minRight = nums[i];
+            for (int j = i; j < n; j++) {
+                minRight = min(minRight, nums[j]);
+            }
+            
+            if (maxLeft - minRight <= k) {
+                return i;
+            }
+        }
+        
+        return -1;
+    }
+};
