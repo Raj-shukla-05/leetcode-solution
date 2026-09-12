@@ -1,0 +1,34 @@
+                    choice[i][j] = choice[prev][j - 
+                    1];
+                    choice[i][j].push_back(idx);
+                } else if (take < skip) {
+                    dp[i][j] = skip;
+                    choice[i][j] = choice[i - 1][j];
+                } else {
+                    dp[i][j] = take;
+                    vector<int> a = choice[prev][j - 
+                    1];
+                    a.push_back(idx);
+                    vector<int> b = choice[i - 1][j];
+                    sort(a.begin(), a.end());
+                    sort(b.begin(), b.end());
+                    choice[i][j] = min(a, b);
+                }
+            }
+        }
+        
+        long long best = 0;
+        vector<int> result;
+        for (int j = 1; j <= 4; j++) {
+            if (dp[n][j] > best || (dp[n][j] == 
+            best && (result.empty() || choice[n][j] < 
+            result))) {
+                best = dp[n][j];
+                result = choice[n][j];
+            }
+        }
+        
+        sort(result.begin(), result.end());
+        return result;
+    }
+};
