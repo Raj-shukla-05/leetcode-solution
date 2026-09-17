@@ -1,0 +1,19 @@
+                right--;
+            }
+            if (sum == target) {
+                minLen = min(minLen, right - left + 1);
+            }
+            suffix[left] = minLen;
+        }
+        
+        int result = INF;
+        for (int i = 0; i < n - 1; i++) {
+            if (prefix[i] != INF && suffix[i + 1] != INF) {
+                result = min(result, prefix[i] + suffix[i + 1]);
+            }
+        }
+        
+        return result == INF ? -1 : result;
+    }
+};
+
