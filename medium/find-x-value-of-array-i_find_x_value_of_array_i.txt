@@ -1,0 +1,29 @@
+class Solution {
+public:
+    vector<long long> resultArray(vector<int>& nums, int k) {
+        int n = nums.size();
+        vector<long long> result(k, 0);
+        vector<long long> next(k, 0);
+        
+        for (int i = n - 1; i >= 0; i--) {
+            vector<long long> curr(k, 0);
+            int v = nums[i] % k;
+            
+            curr[v] += 1;
+            
+            for (int s = 0; s < k; s++) {
+                if (next[s] == 0) continue;
+                int r = (v * s) % k;
+                curr[r] += next[s];
+            }
+            
+            for (int r = 0; r < k; r++) {
+                result[r] += curr[r];
+            }
+            
+            next = curr;
+        }
+        
+        return result;
+    }
+};
