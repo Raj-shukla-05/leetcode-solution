@@ -1,0 +1,33 @@
+            curProd = (curProd * treeProd[node]) % K;
+            return cnt;
+        }
+        int mid = (l + r) / 2;
+        long long res = 0;
+        res += query(2*node, l, mid, ql, qr, curProd, x);
+        res += query(2*node+1, mid+1, r, ql, qr, curProd, x);
+        return res;
+    }
+    
+    vector<int> resultArray(vector<int>& nums, int k, vector<vector<int>>& queries) {
+        n = nums.size();
+        K = k;
+        arr = nums;
+        
+        treeProd.assign(4*n, 1);
+        treeCnt.assign(4*n, vector<int>(K, 0));
+        
+        build(1, 0, n-1);
+        
+        vector<int> result;
+        for (auto& q : queries) {
+            int idx = q[0], val = q[1], start = q[2], x = q[3];
+            update(1, 0, n-1, idx, val);
+            
+            int curProd = 1;
+            long long cnt = query(1, 0, n-1, start, n-1, curProd, x);
+            result.push_back((int)cnt);
+        }
+        
+        return result;
+    }
+};
