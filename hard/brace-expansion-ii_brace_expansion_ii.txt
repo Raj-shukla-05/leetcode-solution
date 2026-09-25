@@ -1,0 +1,19 @@
+        groups.push_back(current);
+        
+        set<string> result;
+        for (auto& g : groups) {
+            result.insert(g.begin(), g.end());
+        }
+        return result;
+    }
+    
+    set<string> cartesian(set<string>& a, set<string>& b) {
+        set<string> result;
+        for (auto& x : a) {
+            for (auto& y : b) {
+                result.insert(x + y);
+            }
+        }
+        return result;
+    }
+};
