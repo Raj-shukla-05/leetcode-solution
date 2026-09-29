@@ -1,0 +1,27 @@
+class Solution {
+public:
+    bool hasValidPath(vector<vector<char>>& grid) {
+        int m = grid.size(), n = grid[0].size();
+        
+        if (grid[0][0] == ')' || grid[m-1][n-1] == '(') return false;
+        if ((m + n - 1) % 2 != 0) return false;
+        
+        vector<vector<vector<bool>>> visited(m, vector<vector<bool>>(n, vector<bool>(m + n, false)));
+        
+        function<bool(int, int, int)> dfs = [&](int r, int c, int bal) -> bool {
+            bal += (grid[r][c] == '(' ? 1 : -1);
+            
+            if (bal < 0) return false;
+            if (r == m - 1 && c == n - 1) return bal == 0;
+            if (visited[r][c][bal]) return false;
+            visited[r][c][bal] = true;
+            
+            if (r + 1 < m && dfs(r + 1, c, bal)) return true;
+            if (c + 1 < n && dfs(r, c + 1, bal)) return true;
+            
+            return false;
+        };
+        
+        return dfs(0, 0, 0);
+    }
+};
