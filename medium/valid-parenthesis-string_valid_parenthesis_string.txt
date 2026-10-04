@@ -1,0 +1,24 @@
+class Solution {
+public:
+    bool checkValidString(string s) {
+        int minBal = 0, maxBal = 0;
+        
+        for (char c : s) {
+            if (c == '(') {
+                minBal++;
+                maxBal++;
+            } else if (c == ')') {
+                minBal--;
+                maxBal--;
+            } else {
+                minBal--;
+                maxBal++;
+            }
+            
+            if (maxBal < 0) return false;
+            minBal = max(minBal, 0);
+        }
+        
+        return minBal == 0;
+    }
+};
