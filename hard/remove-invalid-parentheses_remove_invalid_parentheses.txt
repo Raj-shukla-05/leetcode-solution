@@ -1,0 +1,24 @@
+                if ((int)curr.size() > maxLen) {
+                    maxLen = curr.size();
+                    result.clear();
+                }
+                if ((int)curr.size() == maxLen) {
+                    result.insert(curr);
+                }
+                return;
+            }
+            
+            if (s[idx] == '(' || s[idx] == ')') {
+                dfs(idx + 1, curr, open, close);
+            }
+                if (open != close) return;
+            if (close > open) return;
+            if (idx == s.size()) {
+        open, int close) {
+        int maxLen = -1;
+        
+        function<void(int, string, int, int)> dfs = [&](int idx, string curr, int 
+    vector<string> removeInvalidParentheses(string s) {
+        unordered_set<string> result;
+public:
+class Solution {
