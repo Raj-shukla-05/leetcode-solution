@@ -1,0 +1,9 @@
+        }
+        
+        if (remaining > 0) return "";
+        
+        sort(result.begin(), result.end(), greater<char>());
+        
+        return result;
+    }
+};
