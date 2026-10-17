@@ -1,0 +1,9 @@
+public:
+    int minSwaps(vector<int>& nums) {
+        int n = nums.size();
+        
+        auto digitSum = [](int x) {
+            int s = 0;
+            while (x > 0) {
+                s += x % 10;
+class Solution {
