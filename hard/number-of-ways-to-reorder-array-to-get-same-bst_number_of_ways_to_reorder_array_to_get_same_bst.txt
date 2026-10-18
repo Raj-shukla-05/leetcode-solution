@@ -1,0 +1,9 @@
+            long long rightWays = solve(right);
+            
+            return C[m - 1][left.size()] * leftWays % MOD * rightWays % MOD;
+        };
+        
+        long long result = solve(nums);
+        return (result - 1 + MOD) % MOD;
+    }
+};
