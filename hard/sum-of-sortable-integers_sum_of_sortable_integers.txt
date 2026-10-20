@@ -1,0 +1,9 @@
+                        break;
+                    }
+                }
+            }
+            if (ok) ans += k;
+        }
+        return ans;
+    }
+};
