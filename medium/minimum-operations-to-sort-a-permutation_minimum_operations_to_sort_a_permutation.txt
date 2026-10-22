@@ -1,0 +1,9 @@
+            ans = min(ans, k == 0 ? 0 : min(n - k, k + 2));
+        }
+        if (desc) {
+            int k = (nums[0] + 1) % n;
+            ans = min(ans, min(k, n - k) + 1);
+        }
+        return ans == INT_MAX ? -1 : ans;
+    }
+};
