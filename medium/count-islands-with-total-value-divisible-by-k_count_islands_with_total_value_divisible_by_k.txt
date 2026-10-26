@@ -1,0 +1,17 @@
+                        st.pop();
+                        for (int d = 0; d < 4; d++) {
+                            int nx = x + dirs[d], ny = y + dirs[d + 1];
+                            if (nx >= 0 && ny >= 0 && nx < m && ny < n && grid[nx][ny] > 0) {
+                                sum += grid[nx][ny];
+                                grid[nx][ny] = 0;
+                                st.push({nx, ny});
+                            }
+                        }
+                    }
+                    if (sum % k == 0) count++;
+                }
+            }
+        }
+        return count;
+    }
+};
