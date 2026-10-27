@@ -1,0 +1,9 @@
+        
+        }
+            grid[0][j] = '.';
+        for (int j = 0; j < n; j++) {
+        
+        vector<string> grid(m, string(n, '#'));
+    vector<string> createGrid(int m, int n) {
+public:
+class Solution {
