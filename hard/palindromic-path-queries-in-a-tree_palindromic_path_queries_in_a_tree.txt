@@ -1,0 +1,9 @@
+
+            g[e[1]].push_back(e[0]);
+        }
+        for (auto& e : edges) {
+            g[e[0]].push_back(e[1]);
+        vector<vector<int>> g(n);
+    vector<bool> palindromePath(int n, vector<vector<int>>& edges, string s, vector<string>& queries) {
+public:
+class Solution {
