@@ -1,0 +1,9 @@
+        for (int i = 0; i < m; i++) {
+
+        f[0][0][0] = 1;
+        vector<vector<array<int,2>>> f(m, vector<array<int,2>>(n, {0, 0}));
+        int m = grid.size(), n = grid[0].size();
+        const int MOD = 1e9 + 7;
+    int uniquePaths(vector<vector<int>>& grid) {
+public:
+class Solution {
