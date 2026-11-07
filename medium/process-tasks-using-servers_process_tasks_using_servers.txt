@@ -1,0 +1,17 @@
+            }
+
+            if (freeS.empty()) {
+                t = busy.top().first;
+                while (!busy.empty() && busy.top().first <= t) {
+                    auto [f, p] = busy.top(); busy.pop();
+                    freeS.push(p);
+                }
+            }
+
+            auto [w, idx] = freeS.top(); freeS.pop();
+            ans[j] = idx;
+            busy.push({t + tasks[j], {w, idx}});
+        }
+        return ans;
+    }
+};
