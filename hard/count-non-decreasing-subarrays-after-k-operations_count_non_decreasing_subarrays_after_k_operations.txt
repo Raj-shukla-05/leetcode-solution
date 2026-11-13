@@ -1,0 +1,9 @@
+            long long v = nums[l];
+        deque<pair<long long, long long>> dq;
+        int r = n - 1;
+        for (int l = n - 1; l >= 0; l--) {
+        int n = nums.size();
+        long long ans = 0, cost = 0;
+public:
+    long long countNonDecreasingSubarrays(vector<int>& nums, int k) {
+class Solution {
