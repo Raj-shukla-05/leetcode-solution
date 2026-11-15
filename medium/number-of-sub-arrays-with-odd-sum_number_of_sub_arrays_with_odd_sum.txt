@@ -1,0 +1,9 @@
+                  } else {
+                      ans += odd;
+                      even++;
+                  }
+              }
+              return ans % MOD;
+          }
+      };
+                      odd++;
