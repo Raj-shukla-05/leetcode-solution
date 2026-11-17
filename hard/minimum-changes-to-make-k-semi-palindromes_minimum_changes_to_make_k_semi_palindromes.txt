@@ -1,0 +1,9 @@
+                for (int j = 2 * (p - 1); j <= i - 2; j++) {
+                    if (dp[j][p - 1] == INF || cost[j][i - 1] == INF) continue;
+                    dp[i][p] = min(dp[i][p], dp[j][p - 1] + cost[j][i - 1]);
+                }
+            }
+        }
+        return dp[n][k];
+    }
+};
