@@ -1,0 +1,17 @@
+                saved[u] = last[c];
+                last[c] = u;
+                order.push_back(u);
+                st.push({u, 1});
+                for (int v : ch[u]) st.push({v, 0});
+            } else {
+                last[c] = saved[u];
+            }
+        }
+
+        for (int i = n - 1; i >= 1; i--) {
+            int u = order[i];
+            ans[np[u]] += ans[u];
+        }
+        return ans;
+    }
+};
