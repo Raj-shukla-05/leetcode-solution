@@ -1,0 +1,10 @@
+        }
+            pre.push_back(pre.back() * num);
+        } else {
+            pre.push_back(1);
+            pre.clear();
+        if (num == 0) {
+    void add(int num) {
+
+    }
+        pre.push_back(1);
