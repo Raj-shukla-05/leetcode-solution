@@ -1,0 +1,17 @@
+            cheapest = min(cheapest, price);
+
+            int value = 0;  // includes the item itself
+            for (auto& b : items)
+                if (b[0] % factor == 0) value++;
+
+            for (int s = budget; s >= price; s--)
+                dp[s] = max(dp[s], dp[s - price] + value);
+        }
+        for (auto& a : items) {
+            int factor = a[0], price = a[1];
+
+        int cheapest = INT_MAX;
+    int maximumSaleItems(vector<vector<int>>& items, int budget) {
+        vector<int> dp(budget + 1, 0);
+public:
+class Solution {
