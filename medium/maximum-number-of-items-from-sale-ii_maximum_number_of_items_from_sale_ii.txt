@@ -1,0 +1,9 @@
+            if (R < p) break;
+            long long t = min(c, R / p);
+            R -= t * p;
+            got += 2 * t;
+            best = max(best, got + R / m);
+        }
+        return (int)best;
+    }
+};
